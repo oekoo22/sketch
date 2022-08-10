@@ -14,3 +14,19 @@ for (let i = 1; i < 257; i++) {
   
 }
 
+
+const button = document.getElementById('Btn');
+
+button.addEventListener('click', theNewGrid);
+    
+function getNewGrid() {
+    container.innerText = ''; // clear everything
+}
+
+function theNewGrid(){
+       getNewGrid();
+       let number = prompt("How many squares per side for the new grid?" );
+      
+       createGrid(number); // pass the number as an argument
+};
+
