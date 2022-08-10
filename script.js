@@ -1,8 +1,9 @@
 const container = document.querySelector('.container');
 
 // Add 16 divs
-function createGrid() {
+/*function createGrid() {
     for (let i = 1; i < 257; i++) {
+        
         const div = document.createElement('div');
         //div.classList.add("square");
         div.style.cssText = "border: 1px solid black; height: 35px; width: 35px"; 
@@ -16,12 +17,14 @@ function createGrid() {
     }
 }
 
-createGrid();
+createGrid();*/
 
 
 function changeGrid(rows, cols) {
     
     for (i = 0; i < (rows * cols); i++){
+        container.style.setProperty('--grid-rows', rows);
+        container.style.setProperty('--grid-cols', cols);
         const div = document.createElement('div');
         //div.classList.add("square");
         div.style.cssText = "border: 1px solid black; height: 35px; width: 35px"; 
@@ -33,6 +36,8 @@ function changeGrid(rows, cols) {
         container.appendChild(div);
     };
   };
+
+  changeGrid(16, 16);
 
 
 
