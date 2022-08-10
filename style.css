@@ -8,14 +8,7 @@
     display: grid;
     
    
-    grid-template-columns: repeat(16, 25px [col-start]);
+    grid-template-columns: repeat(16, 35px [col-start]);
     
 }
 
-.square {
-    height: 5px;
-    width: 5px;
-    
-    border: 1px solid black;
-   
-}
