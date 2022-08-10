@@ -1,18 +1,27 @@
 const container = document.querySelector('.container');
 
 // Add 16 divs
-for (let i = 1; i < 257; i++) {
-  const div = document.createElement('div');
-  //div.classList.add("square");
-  div.style.cssText = "border: 1px solid black; height: 35px; width: 35px"; 
-  div.classList.add("square"); 
-  div.addEventListener("mouseover", () =>{
-    div.style.transition = "background-color .7s";
-    div.style.backgroundColor = "black";
-  });
-  container.appendChild(div);
-  
+function createGrid() {
+    for (let i = 1; i < 257; i++) {
+        const div = document.createElement('div');
+        //div.classList.add("square");
+        div.style.cssText = "border: 1px solid black; height: 35px; width: 35px"; 
+        div.classList.add("square"); 
+        div.addEventListener("mouseover", () =>{
+            div.style.transition = "background-color .7s";
+            div.style.backgroundColor = "black";
+        });
+        container.appendChild(div);
+    
+    }
 }
+
+createGrid();
+
+
+
+
+
 
 
 const button = document.getElementById('Btn');
