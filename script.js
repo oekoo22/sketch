@@ -19,7 +19,20 @@ function createGrid() {
 createGrid();
 
 
-
+function changeGrid(rows, cols) {
+    
+    for (i = 0; i < (rows * cols); i++){
+        const div = document.createElement('div');
+        //div.classList.add("square");
+        div.style.cssText = "border: 1px solid black; height: 35px; width: 35px"; 
+        div.classList.add("square"); 
+        div.addEventListener("mouseover", () =>{
+            div.style.transition = "background-color .7s";
+            div.style.backgroundColor = "black";
+        });
+        container.appendChild(div);
+    };
+  };
 
 
 
@@ -36,6 +49,6 @@ function theNewGrid(){
        getNewGrid();
        let number = prompt("How many squares per side for the new grid?" );
       
-       createGrid(number); // pass the number as an argument
+       changeGrid(number, number); // pass the number as an argument
 };
 
