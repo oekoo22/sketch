@@ -31,8 +31,9 @@ function changeGrid(rows, cols) {
         div.classList.add("square"); 
         div.addEventListener("mouseover", () =>{
             div.style.transition = "background-color .7s";
-            div.style.backgroundColor = "black";
+            div.style.backgroundColor = "#333333";
         });
+        
         container.appendChild(div);
     };
   };
@@ -70,8 +71,11 @@ function theNewGrid(){
        
 };
 
-/* Random Color as a button?
-    function randomColor() {
-  var generateColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-  return generateColor;
+
+
+
+/*Random Color as a button
+function randomColor() {
+  let generateColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+  div.style.backgroundColor = generateColor;
 }*/
