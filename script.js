@@ -43,8 +43,16 @@ function changeGrid(rows, cols) {
 
 
 const button = document.getElementById('Btn');
+const clearBtn = document.getElementById('clear');
 
 button.addEventListener('click', theNewGrid);
+clearBtn.addEventListener('click', clearGrid);
+
+function clearGrid() {
+    getNewGrid();
+    changeGrid(16, 16);
+
+}
     
 function getNewGrid() {
     container.innerText = ''; // clear everything
@@ -53,7 +61,17 @@ function getNewGrid() {
 function theNewGrid(){
        getNewGrid();
        let number = prompt("How many squares per side for the new grid?" );
-      
-       changeGrid(number, number); // pass the number as an argument
+        if (number <= 100) {
+            changeGrid(number, number); // pass the number as an argument
+        } else {
+            number = prompt("Please enter a number lower or equal to 100");
+            changeGrid(number, number);
+        }
+       
 };
 
+/* Random Color as a button?
+    function randomColor() {
+  var generateColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+  return generateColor;
+}*/
